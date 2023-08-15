@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;700;900&display=swap');
+
+*, * > * {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    background-color: rgb(249, 210, 210);
+}
+
+.hero {
+    background-color: rgb(3, 3, 3);
+    height: 100vh;
+    color: rgb(161, 44, 44);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    height: 80vh;
+    border-radius: 1rem;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+    transition: all 700ms ease-in;
+}
+
+.headline-panel {
+    position: absolute;
+    bottom: 1rem; left: .5rem;
+}
+.headline-panel h3,
+.headline-panel h1{
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.headline-panel h6 {
+    position: absolute;
+    bottom: 2.2rem; left: .5rem;
+    color: rgb(90, 61, 61);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.headline-opacity {
+    opacity: 0;
+}
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h1,
+.panel.active h3,
+.panel.active h6{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.3s;
+}
+
+
+.panel:nth-child(1) {
+    background: url(./tricot.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+.panel:nth-child(2) {
+    background: url(./ikkyu-profile.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+.panel:nth-child(3) {
+    background: url(./kida-profile.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.panel:nth-child(4) {
+    background: url(./hiromi-profile.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+.panel:nth-child(5) {
+    background: url(./yoshida-profile.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+    .panel {
+        margin: 8px;
+    }
+}
